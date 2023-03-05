@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="Tiktaktoegame.css">
+    
+</head>
+<body>
+
+    <div class="container" style = "background-image: url(../Downloads/wallpaperflare.com_wallpaper.jpg)">
+        <div class="input_takers">
+            <label for="player1">Player X : </label>
+            <input type="text" id="player1" name="player1" placeholder="player x's name">
+        </div>
+        <div class="input_takers">
+            <label for="player2">Player O : </label>
+            <input type="text" id="player2" name="player2" placeholder="player y's name">
+        </div>
+        <div>
+            <input type="button" id="starter" value="Start">
+        </div>
+        <h1 id="playerText">Tik Tak Toe Game</h1>
+        <div id="gameboard">
+            <div class="box" id="0"></div>
+            <div  class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
+        <div class="already" id="already"></div>
+        <div>
+            <div id="X">X Won : 0</div>
+            <div id="Y">O Won : 0</div>
+            <div class="Draw" id="Draw">Draw  <:>  0</div>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+    <script src="Tiktaktoegame.js"></script>
+    
+</body>
+</html>

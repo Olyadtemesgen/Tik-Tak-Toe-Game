@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    /* bakground-image: url("../Downloads/wallpaperflare.com_wallpaper.jpg"); */
+    color: white;
+    display: flex;
+    /* background-repeat: no-repeat; */
+}
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+.input_takers{
+    display: inline;
+}
+.mark{
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: black;
+    background-color: white;
+}
+
+#gameboard {
+    
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin:50px;
+    
+}
+.box {
+    /* margin: 10px; */
+    height: 200px;
+    width: 200px;
+    margin-right: 30px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    font-size: 100px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.box:hover{
+    scale: 1.1;
+    background-color: white;
+    transition: all 0.5s;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: #a0a0a0;
+    border-color: white;
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+button:hover {
+    background-color: green;
+    scale: 1.1;
+    transition: all 0.3;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
