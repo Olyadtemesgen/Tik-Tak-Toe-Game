@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="Tiktaktoegame.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="start_game">
+            <div class="input_takers i_t_1">
+                <label class="l_t_1" for="player1">Player X : </label>
+                <input class="player" type="text" id="player1" name="player1" placeholder="player x's name">
+            </div>
+            <div class="input_takers ">
+                <label class="l_t_2"for="player2">Player O : </label>
+                <input class="player"type="text" id="player2" name="player2" placeholder="player y's name">
+            </div>
+       
+            <button class="btn"  id="starter" value="Start">Start</button>
+      
+        </div>
+        <div class="games">
+            <h1 class="players" id="playerText">Tik Tak Toe Game</h1>
+            <div id="gameboard" class="gameboard">
+                <div class="box" id="0"></div>
+                <div  class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+        </div>
+        <div class="already" id="already"></div>
+        <div class="who_won">
+            <div class="anothers">
+                <div id="X" class="anothers1">X WON : 0</div>
+                <div id="Y" class="anothers2">O WON : 0</div>
+                <div class="anothers3" id="Draw">DRAW  :  0</div>
+            </div>
+            <button  class="btn" id="restartBtn">Restart</button>
+        </div>
+    </div>
+    
+    
+</body>
+<script src="Tiktaktoegame.js"></script>
+</html>
