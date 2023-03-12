@@ -6,11 +6,12 @@ color_object = {
 
 let starter = document.getElementsByName('X_O')
 console.log(starter)
+// let containers = document.getElementsByClassName("container")
 let xx = document.getElementById('X')
 let yy = document.getElementById('Y')
 let player1 = document.getElementById('player1')
 let player2 = document.getElementById('player2')
-
+let contains = document.getElementsByClassName("gameboard")[0]
 objects = {
     "X":{player1},
     "O":{player2}
@@ -23,9 +24,11 @@ let Draws = document.getElementById('Draw')
 let x_winner = 0
 let y_winner = 0
 let draw = 0
+let takers = document.getElementsByClassName('start_game')[0];
 document.getElementById("starter").addEventListener('click', () =>{
     x_winner = 0;
     y_winner = 0;
+
     window.draw = 0;
     xx.innerText = `${player1.value} Won : ${x_winner}`;
     yy.innerText = `${player2.value} Won : ${y_winner}`; 
@@ -124,18 +127,18 @@ function gamePlayed(e) {
             
             if(validator_game(array)){
                 
-                playerText.innerHTML = `${currentPlayer === "X"?player1:player2} has won!`
-                playerText.style.color = color_object[currentPlayer]
+                playerText.innerText = `${currentPlayer === "X"?currentPlayer:player2} has won!`
+                // playerText.style.color = color_object[currentPlayer]
                 
                 if (currentPlayer === 'X'){
                     
                     xx.innerText = `${player1.value} Won : ${++x_winner}`;
-                    xx.style.color = color_object[currentPlayer]
+                    // xx.style.color = color_object[currentPlayer]
                 }
                 
                 else if(currentPlayer === 'O'){
                     yy.innerText = `${player2.value} Won : ${++y_winner}`;
-                    yy.style.color = color_object[currentPlayer]
+                    // yy.style.color = color_object[currentPlayer]
                 }
                 sum = 0;
                 return;
@@ -152,7 +155,7 @@ function gamePlayed(e) {
             playerText.innerHTML = `Draw`
             
             Draws.innerText = `Draw : ${++draw}`
-            Draws.style.color = color_object['Draw']
+            // Draws.style.color = color_object['Draw']
         }
     }
     else{
@@ -162,8 +165,9 @@ function gamePlayed(e) {
 }
 
 restartBtn.addEventListener('click', restart)
-
 function restart() {
+    takers.style.innerHTML = `<div>${currentPlayer} is playing</div>`;
+    contains.style.display = "grid";
     for (let i = 0; i < 3; i++){
         for (let j = 0; j < 3; j++){
             array[i][j] = null

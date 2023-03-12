@@ -1,85 +1,98 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-body {
-    /* bakground-image: url("../Downloads/wallpaperflare.com_wallpaper.jpg"); */
     color: white;
-    display: flex;
-    /* background-repeat: no-repeat; */
 }
-h1 {
-    font-size: 54px;
-    text-transform: uppercase;
-}
-.input_takers{
-    display: inline;
-}
-.mark{
-    margin-top: 10px;
-    height: 40px;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    padding: 40px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: black;
-    background-color: white;
-}
-
-#gameboard {
-    
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    margin:50px;
-    
-}
-.box {
-    /* margin: 10px; */
-    height: 200px;
-    width: 200px;
-    margin-right: 30px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: black;
-    font-size: 100px;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-.box:hover{
-    scale: 1.1;
-    background-color: white;
-    transition: all 0.5s;
-}
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 10px;
+body{
     background-color: black;
-    color: #a0a0a0;
-    border-color: white;
-    font-size: 18px;
-    transition: 200ms transform;
-    font-weight: 600;
 }
-button:hover {
+.players{
+    padding: 30px;
+    text-align: center;
+}
+.start_game *{
+    margin-top: 10px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+}
+.player{
+    color: black;
+}
+.l_t_1{
+    color: green;
+}
+.l_t_2{
+    color: yellow;
+}
+.anothers{
+    font-size: 3em;
+}
+.anothers *{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 6px;
+}
+.anothers1{
     background-color: green;
-    scale: 1.1;
-    transition: all 0.3;
-    cursor: pointer;
-    transform: translateY(-2px);
+    color: red;
+}
+.anothers2{
+    background-color: yellow;
+    color: blue;
+}
+.anothers3{
+    background-color: red;
+    color: green;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: flex-start;
+
+    align-self: center;
+}
+
+.start_game{
+    margin: 200px auto;
+}
+
+.gameboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 0;
+    row-gap: 0.5em;
+    column-gap: 0.5em;
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
+/* .games{
+    flex-basis: 800px;
+} */
+.who_won{
+    
+    margin: 200px auto;
+
+}
+.btn{
+    color: wheat;
+    background-color: forestgreen;
+    padding: 5px;
+    font-size: 1.5em;
+    width: 110px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 100px;
+}
+.btn:hover{
+    scale: 1.03;
 }
